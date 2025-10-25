@@ -14,9 +14,9 @@ async function sendJWT(req,res,next){
         //storing the JWT token in the token cookie 
         res.cookie("token",token,{
             httpOnly:true,
-            secure:false,
+            secure:true,
             maxAge:24*60*60*1000,
-            sameSite:'lax'
+            sameSite:'None'
         })
 
         next();
@@ -28,3 +28,4 @@ async function sendJWT(req,res,next){
 }
 
 module.exports=sendJWT;
+
