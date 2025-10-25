@@ -1,6 +1,6 @@
 const mongoose=require('mongoose');
 
-const MONGODB_URL=process.env.MONGODB_URL;
+const MONGODB_URL=process.env.MONGODB_URI;
 
 //establishing connection with mongodb database
 mongoose.connect(MONGODB_URL).then(()=>{
@@ -8,4 +8,5 @@ mongoose.connect(MONGODB_URL).then(()=>{
 }).catch((err)=>{
     console.log("Error while connecting to mongodb");
 })
+
 
