@@ -14,6 +14,8 @@ const utilRoutes=require('./Routes/utils.js');
 //to access all data in environment variable
 require('dotenv').config();
 
+    require('./DB/connection.js');
+
 const frontendURL = process.env.FRONTEND_URL;
 
 const app=express();
@@ -133,5 +135,6 @@ server.listen(PORT,()=>{
     console.log(`Server running on port ${PORT}`);
 
     //establishing connection with the database
-    require('./DB/connection.js');
+
 })
+
